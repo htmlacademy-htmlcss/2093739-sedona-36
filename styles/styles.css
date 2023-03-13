@@ -64,6 +64,7 @@ body {
 }
 
 .page-header {
+  background-color: #FFFFFF;
   display: flex;
   width: 1200px;
   margin: 0 auto;
@@ -116,7 +117,6 @@ body {
   left: 16px;
   height: 2px;
   background-color: #756257;
-
 }
 
 .main-menu {
@@ -148,26 +148,28 @@ body {
   fill: #000000;
 }
 
+.main-menu-icon:hover {
+  fill: #756157;
+}
+
 .main-menu-icon-label {
-  box-sizing: border-box;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: 20px;
   top: 11px;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   font-size: 10px;
   line-height: 10px;
   background-color: #7DB54F;
   color: #FFFFFF;
-  text-align: center;
   border-radius: 10px;
 }
 
-.main-menu-icon:hover {
-  fill: #756157;
-}
-
 .main-menu-button {
+  margin-left: 20px;
   padding: 8px 34px;
   background-color: #756157;
 }
@@ -178,12 +180,13 @@ body {
 }
 
 .hero {
-  position: relative;
+  background-color: #000000;
   margin-bottom: 69px;
   padding: 51px 0 82px;
-  background-image: url(../images/hero-banner.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  background-image: url(../images/divider.png), url(../images/hero-banner.jpg);
+  background-position: bottom center;
+  background-size: 100% auto, cover;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .hero-logo {
@@ -241,9 +244,11 @@ body {
 .advantages-item-container::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   width: 60px;
   height: 2px;
   background-color: currentColor;
@@ -302,10 +307,11 @@ body {
 .about-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 85px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 81px 85px;
   width: 230px;
-  min-height: 385px;
+  min-height: 223px;
 }
 
 .about-title {
@@ -327,12 +333,13 @@ body {
   color: #333333;
 }
 
-.about-hotels,
+.about-house,
 .about-gifts {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
 .about-item-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -341,6 +348,7 @@ body {
 }
 
 .about-item-description {
+  margin: 0;
   text-align: center;
   color: #333333;
 }
@@ -424,6 +432,7 @@ body {
 
 .subscribe-submit {
   padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
   background-color: #82B3D3;
 }
 
@@ -431,21 +440,38 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1200px;
-  padding: 0 70px;
+  padding: 35px 70px 45px;
 }
 
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 150px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .footer-social-link {
+  position: relative;
   display: block;
-  min-width: 18px;
-  min-height: 16px;
+  min-width: 24px;
+  min-height: 18px;
+  padding: 11px 12px;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
+}
+
+.social-icon:hover {
+  fill: #68A2CA;
 }
 
 .footer-phone-link {
@@ -453,6 +479,16 @@ body {
   line-height: 40px;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-copyright-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.copyright-icon {
+  fill: #000000;
 }
 
 .inner-header {
