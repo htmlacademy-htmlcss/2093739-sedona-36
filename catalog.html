@@ -41,30 +41,30 @@
             </a>
           </li>
           <li class="main-menu-item">
-            <a class="main-menu-link main-menu-button button" href="#">Хочу сюда!</a>
+            <a class="main-menu-button button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-container main-inner">
       <div class="page-container">
-        <header class="inner-header">
-          <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html">
-                <span class="visually-hidden">
-                  Главная
-                </span>
-              </a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
-            </li>
-          </ul>
-          <section class="catalog-products">
+        <div class="catalog-header-container">
+          <header class="inner-header">
+            <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="index.html">
+                  <img class="breadcrumbs-home" src="images/home.svg" width="12" height="12" alt="">
+                </a>
+              </li>
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link">Гостиницы</a>
+              </li>
+            </ul>
+          </header>
+          <section class="catalog-filter">
             <h2 class="visually-hidden"> Список гостиниц с фильтрами</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-infrastructure">
                 <legend class="catalog-filter-legend">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
@@ -113,21 +113,21 @@
               </fieldset>
               <fieldset class="catalog-filter-price">
                 <legend class="catalog-filter-legend">Стоимость, ₽:</legend>
-                  <label class="control">
-                    <input class="catalog-filter-pricerange" type="text" name="price-min" value="0" placeholder="от">
-                  </label>
-                  <label class="control">
-                    <input class="catalog-filter-pricerange" type="text" name="price-max" value="9000" placeholder="до">
-                  </label>
-                  <label class="control">
-                    <input class="catalog-filter-pricerange" type="range" name="price-range">
-                  </label>
+                <label class="control">
+                  <input class="catalog-filter-pricerange" type="text" name="price-min" value="0" placeholder="от">
+                </label>
+                <label class="control">
+                  <input class="catalog-filter-pricerange" type="text" name="price-max" value="9000" placeholder="до">
+                </label>
+                <label class="control">
+                  <input class="catalog-filter-pricerange" type="range" name="price-range">
+                </label>
               </fieldset>
               <button class="filter-submit button" type="submit">Применить</button>
               <button class="filter-reset button" type="reset">Сбросить</button>
             </form>
           </section>
-        </header>
+        </div>
         <section class="hotels">
           <div class="sorting-container">
             <h2 class="visually-hidden">Результаты поиска</h2>
@@ -137,21 +137,21 @@
             </select>
             <ul class="hotels-view-list">
               <li class="hotel-view-item">
-                <a class="hotel-view-link" href="#">
+                <a class="hotel-view-link hotel-view-card-link hotel-view-link-current" href="#" type="button">
                   <span class="visually-hidden">
                     Показать карточки
                   </span>
                 </a>
               </li>
               <li class="hotel-view-item">
-                <a class="hotel-view-link" href="#">
+                <a class="hotel-view-link hotel-view-one-link" href="#" type="button">
                   <span class="visually-hidden">
                     Показать по одному
                   </span>
                 </a>
               </li>
               <li class="hotel-view-item">
-                <a class="hotel-view-link" href="#">
+                <a class="hotel-view-link hotel-view-list-link" href="#" type="button">
                   <span class="visually-hidden">
                     Показать списком
                   </span>
@@ -176,7 +176,7 @@
                 <li class="rating-star starred"></li>
                 <li class="rating-star"></li>
               </ul>
-              <p class="hotel-rating">Рейтинг: 8,5</p>
+              <a class="hotel-rating" href="#">Рейтинг: 8,5</a>
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -187,8 +187,14 @@
               <p class="hotel-price">От 5000 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-in-favorites button" type="button">в избранном</button>
-              <div class="hotel-rating-star"></div>
-              <p class="hotel-rating">Рейтинг: 9,2</p>
+              <ul class="hotel-rating-star">
+                <li class="rating-star starred"></li>
+                <li class="rating-star starred"></li>
+                <li class="rating-star starred"></li>
+                <li class="rating-star starred"></li>
+                <li class="rating-star"></li>
+              </ul>
+              <a class="hotel-rating" href="#">Рейтинг: 9,2</a>
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -199,8 +205,14 @@
               <p class="hotel-price">От 2500 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <div class="hotel-rating-star"></div>
-              <p class="hotel-rating">Рейтинг: 6,9</p>
+              <ul class="hotel-rating-star">
+                <li class="rating-star starred"></li>
+                <li class="rating-star starred"></li>
+                <li class="rating-star starred"></li>
+                <li class="rating-star"></li>
+                <li class="rating-star"></li>
+              </ul>
+              <a class="hotel-rating" href="#">Рейтинг: 6,9</a>
             </li>
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -211,8 +223,14 @@
               <p class="hotel-price">От 1500 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <div class="hotel-rating-star"></div>
-              <p class="hotel-rating">Рейтинг: 5,0</p>
+              <ul class="hotel-rating-star">
+                <li class="rating-star starred"></li>
+                <li class="rating-star starred"></li>
+                <li class="rating-star"></li>
+                <li class="rating-star "></li>
+                <li class="rating-star"></li>
+              </ul>
+              <a class="hotel-rating" href="#">Рейтинг: 5,0</a>
             </li>
           </ul>
           <ul class="pagination">
@@ -245,7 +263,7 @@
           <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscribe-email" type="email" placeholder="Ваш e-mail">
-            <button class="subscribe-submit button" type="submit">Подписаться</button>
+            <button class="subscribe-submit button button-big" type="submit">Подписаться</button>
           </form>
         </section>
         <section class="footer-links">
