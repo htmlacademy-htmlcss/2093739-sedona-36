@@ -551,7 +551,7 @@ body {
 .footer-copyright-link {
   display: flex;
   align-items: center;
-  color: #000;
+  color: #000000;
 }
 
 .footer-copyright-link:hover,
@@ -625,6 +625,7 @@ body {
 
 .catalog-filter-infrastructure {
   width: 150px;
+  border: none;
 }
 
 .catalog-filter-typeofhousing {
@@ -645,6 +646,11 @@ body {
 
 .catalog-filter-item {
   line-height: 23px;
+}
+
+.filter-buttons-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-submit {
@@ -763,12 +769,42 @@ body {
   background-color: #756157;
 }
 
+.hotel-more-information:hover,
+.hotel-more-information:focus {
+  outline: none;
+  background-color: #615048;
+}
+
+.hotel-more-information:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .hotel-add-favorites {
   background-color: #82B3D3;
 }
 
+.hotel-add-favorites:hover,
+.hotel-add-favorites:focus {
+  outline: none;
+  background-color: #68A2CA;
+}
+
+.hotel-add-favorites:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .hotel-in-favorites {
   background-color: #7DB54F;
+}
+
+.hotel-in-favorites:hover,
+.hotel-in-favorites:focus {
+  outline: none;
+  background-color: #6C9E42;
+}
+
+.hotel-in-favorites:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-rating-star {
@@ -836,6 +872,16 @@ body {
   background-color: #82B3D3;
   color: #FFFFFF;
   border-radius: 4px;
+}
+
+.pagination-link:hover,
+.pagination-link:focus {
+  outline: none;
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-link.pagination-current {
