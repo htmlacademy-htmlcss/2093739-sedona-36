@@ -623,29 +623,100 @@ body {
   display: flex;
 }
 
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-filter-infrastructure {
   width: 150px;
-  border: none;
+  margin-right: 70px;
 }
 
 .catalog-filter-typeofhousing {
   width: 150px;
+  margin-right: 150px;
 }
 
 .catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .catalog-filter-legend {
+  margin-bottom: 32px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  color: #FFFFFF;
 }
 
-.catalog-filter-item {
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 23px;
+  color: #FFFFFF;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-radio {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="radio"]:checked + .control-radio {
+  background-image: url("../images/dot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.control-input:focus + .control-radio {
+  outline: 3px solid #83b3d3;
+}
+
+.control-input:disabled + .control-mark {
+  opacity: 0.3;
+}
+
+.control-input:disabled + .control-radio {
+  opacity: 0.3;
 }
 
 .filter-buttons-container {
@@ -658,7 +729,7 @@ body {
 }
 
 .hotels {
-  padding: 50px 70px;
+  padding: 50px 70px 60px;
 }
 
 .sorting-container {
