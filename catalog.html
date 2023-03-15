@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Седона - каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   </head>
   <body>
     <header class="page-header">
@@ -145,6 +145,8 @@
             <p class="hotels-value">Найдено гостиниц: 38</p>
             <select class="hotels-select" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
             </select>
             <ul class="hotels-view-list">
               <li class="hotel-view-item">
@@ -180,13 +182,7 @@
               <p class="hotel-price">От 4000 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <ul class="hotel-rating-star">
-                <li class="rating-star starred"></li>
-                <li class="rating-star starred"></li>
-                <li class="rating-star starred"></li>
-                <li class="rating-star starred"></li>
-                <li class="rating-star"></li>
-              </ul>
+              <img class="rating-stars" src="images/four-stars.svg" width="90" height="17" alt="Четыре звезды.">
               <p class="hotel-rating">Рейтинг: 8,5</p>
             </li>
             <li class="hotel-card">
@@ -198,7 +194,7 @@
               <p class="hotel-price">От 5000 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-in-favorites button" type="button">в избранном</button>
-              <div class="hotel-rating-star"></div>
+              <img class="rating-stars" src="images/four-stars.svg" width="90" height="17" alt="Четыре звезды.">
               <p class="hotel-rating">Рейтинг: 9,2</p>
             </li>
             <li class="hotel-card">
@@ -210,7 +206,7 @@
               <p class="hotel-price">От 2500 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <div class="hotel-rating-star"></div>
+              <img class="rating-stars" src="images/three-stars.svg" width="66" height="17" alt="Три звезды.">
               <p class="hotel-rating">Рейтинг: 6,9</p>
             </li>
             <li class="hotel-card">
@@ -222,7 +218,7 @@
               <p class="hotel-price">От 1500 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <div class="hotel-rating-star"></div>
+              <img class="rating-stars" src="images/two-stars.svg" width="42" height="17" alt="Три звезды.">
               <p class="hotel-rating">Рейтинг: 5,0</p>
             </li>
           </ul>
