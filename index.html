@@ -160,64 +160,60 @@
       </div>
     </footer>
     <div class="modal-container modal-container-close">
-      <div class="modal">
-        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <div class="modal modal-auth">
         <button class="modal-close-button">
-          <svg class="modal-close-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path d="M17.49 4.783 16.199 3.49l-5.707 5.708L4.783 3.49 3.491 4.783l5.707 5.708-5.707 5.707 1.292 1.293 5.708-5.708 5.707 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z"/></svg>
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <form class="modal-form" method="get" action="https://echo.htmlacademy.ru/">
-          <div class="modal-content">
-            <label for="arr-date">Дата заезда:</label>
-            <input class="dates" type="text" name="arrival-date" id="arr-date" placeholder="Укажите дату">
-            <svg width="16" height="15" fill="currentColor">
-              <use href="images/modal/modal-sprites.svg#calendar"></use>
-            </svg>
-            <span class="modal-text red">Мы не можем отправить вас в прошлое.</span>
-          </div>
-          <div class="modal-content">
-            <label for="dep-date">Дата выезда:</label>
-            <input class="dates" type="text" name="departure-date" id="dep-date" placeholder="Укажите дату">
-            <svg width="16" height="15" fill="currentColor">
-              <use href="images/modal/modal-sprites.svg#calendar"></use>
-            </svg>
-            <span class="modal-text">На эти даты есть свободные номера. Пока есть.</span>
-          </div>
-          <div class="visitors">
-            <label for="adult">Взрослые:</label>
-            <div class="visitors-number">
-              <button class="button-less" type="button" aria-label="Меньше">
-                <svg width="14" height="2" fill="currentColor">
-                  <use href="images/modal/modal-sprites.svg#less"></use>
-                </svg>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post"></form>
+          <ul class="modal-list">
+            <li class="modal-item">
+              <span class="modal-item-header">Дата Заезда:</span>
+              <label class="visually-hidden" for="auth-date"></label>
+              <input value="27 апреля 2020" class="auth-form-field field" type="text" id="auth-date" name="auth-date" placeholder="Укажите дату">
+              <button class="foto-date">
               </button>
-              <input class="quantity" id="adult" type="number" name="adult-number" placeholder="2">
-              <button class="button-more" type="button" aria-label="Больше">
-                <svg width="14" height="14" fill="currentColor">
-                  <use href="images/modal/modal-sprites.svg#more"></use>
-                </svg>
+              <div class="error-wrapper">
+                <p class="error">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </li>
+            <li class="modal-item">
+              <span class="modal-item-header">Дата Выезда:</span>
+              <label class="visually-hidden" for="auth-date">Дата</label>
+              <input value="1 сентября 2023" class="auth-form-field field" type="text" id="auth-date" name="auth-date" placeholder="Укажите дату">
+              <button class="foto-date-too">
               </button>
-            </div>
-            <label for="children">Дети:</label>
-            <span class="tooltip" role="tooltip">
-              <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-            </span>
-            <div class="visitors-number">
-              <button class="button-less" type="button" aria-label="Меньше">
-                <svg width="14" height="2" fill="currentColor">
-                  <use href="images/modal/modal-sprites.svg#less"></use>
-                </svg>
-              </button>
-              <input class="quantity" id="children" type="number" name="children-number" placeholder="2">
-              <button class="button-more" type="button" aria-label="Больше">
-                <svg width="14" height="14" fill="currentColor">
-                  <use href="images/modal/modal-sprites.svg#more"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <button class="button modal-button">Найти</button>
-        </form>
+              <div class="date-actual-wrapper">
+                <p class="date-actual">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+            </li>
+            </form>
+            <li class="modal-item-people">
+              <span class="modal-item-human">Взрослые:</span>
+              <div class="auth-form-field-people field-people">
+                <span class="modal-minus"></span>
+                <span class="modal-figure">2</span>
+                <span class="modal-plus"></span>
+              </div>
+              <span class="modal-item-child">Дети:</span>
+              <div class="auth-form-field-people field-people-2">
+                <span class="modal-minus-2"></span>
+                <span class="modal-figure">2</span>
+                <span class="modal-plus-2"></span>
+              </div>
+              <div class="icon-i">
+              </div>
+              <div class="popover">
+                <p class="popover-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+            </li>
+            <button class="modal-button-search" type="submit">
+              <span class="modal-button-text">Найти</span>
+            </button>
+          </ul>
+        </section>
       </div>
     </div>
   </body>
