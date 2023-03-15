@@ -51,6 +51,7 @@
       <div class="page-container">
         <h1 class="visually-hidden">Седона — туристический городок в штате Аризона</h1>
         <section class="hero">
+          <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
             <img class="hero-logo" src="images/logo-hero.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona.">
         </section>
         <section class="advantages">
@@ -170,8 +171,8 @@
           <ul class="modal-list">
             <li class="modal-item">
               <span class="modal-item-header">Дата Заезда:</span>
-              <label class="visually-hidden" for="auth-date"></label>
-              <input value="27 апреля 2020" class="auth-form-field field" type="text" id="auth-date" name="auth-date" placeholder="Укажите дату">
+              <label class="visually-hidden" for="auth-date">Дата</label>
+              <input value="27 апреля 2020" class="auth-form-field field" type="text" id="from-date" name="auth-date" placeholder="Укажите дату">
               <button class="foto-date">
               </button>
               <div class="error-wrapper">
@@ -181,14 +182,13 @@
             <li class="modal-item">
               <span class="modal-item-header">Дата Выезда:</span>
               <label class="visually-hidden" for="auth-date">Дата</label>
-              <input value="1 сентября 2023" class="auth-form-field field" type="text" id="auth-date" name="auth-date" placeholder="Укажите дату">
+              <input value="1 сентября 2023" class="auth-form-field field" type="text" id="to-date" name="auth-date" placeholder="Укажите дату">
               <button class="foto-date-too">
               </button>
               <div class="date-actual-wrapper">
                 <p class="date-actual">На эти даты есть свободные номера. Пока есть.</p>
               </div>
             </li>
-            </form>
             <li class="modal-item-people">
               <span class="modal-item-human">Взрослые:</span>
               <div class="auth-form-field-people field-people">
@@ -209,10 +209,10 @@
                   Дети до 6 лет размещаются бесплатно.</p>
               </div>
             </li>
-            <button class="modal-button-search" type="submit">
-              <span class="modal-button-text">Найти</span>
-            </button>
           </ul>
+          <button class="modal-button-search" type="submit">
+            <span class="modal-button-text">Найти</span>
+          </button>
         </section>
       </div>
     </div>
