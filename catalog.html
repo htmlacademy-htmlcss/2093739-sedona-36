@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона - каталог</title>
+    <title>Седона - каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <header class="page-header">
@@ -119,11 +120,13 @@
               </fieldset>
               <fieldset class="catalog-filter-group catalog-filter-price">
                 <legend class="catalog-filter-legend">Стоимость, ₽:</legend>
-                <label class="control">
-                  <input class="catalog-filter-pricerange" type="text" name="price-min" value="0" placeholder="от">
+                <label class="price-label">
+                  <input class="price-input" type="number" name="price-min" value="0" min="0" max="12000">
+                  от
                 </label>
-                <label class="control">
-                  <input class="catalog-filter-pricerange" type="text" name="price-max" value="9000" placeholder="до">
+                <label class="price-label">
+                  <input class="price-input" type="number" name="price-max" value="9000" min="0" max="12000">
+                  до
                 </label>
                 <label class="control">
                   <input class="catalog-filter-pricerange" type="range" name="price-range">
