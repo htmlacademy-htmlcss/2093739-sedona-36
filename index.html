@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   </head>
   <body>
     <header class="page-header">
@@ -50,6 +51,7 @@
       <div class="page-container">
         <h1 class="visually-hidden">Седона — туристический городок в штате Аризона</h1>
         <section class="hero">
+          <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
             <img class="hero-logo" src="images/logo-hero.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona.">
         </section>
         <section class="advantages">
@@ -124,7 +126,7 @@
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-email" type="email" placeholder="Ваш e-mail">
+            <input class="subscribe-email" type="email" name="user-mail" id="subscribe-user-mail" placeholder="Ваш e-mail" required>
             <button class="subscribe-submit button button-big" type="submit">Подписаться</button>
           </form>
         </section>
@@ -158,5 +160,61 @@
         </section>
       </div>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post"></form>
+          <ul class="modal-list">
+            <li class="modal-item">
+              <span class="modal-item-header">Дата Заезда:</span>
+              <label class="visually-hidden" for="auth-date">Дата</label>
+              <input value="27 апреля 2020" class="auth-form-field field" type="text" id="from-date" name="auth-date" placeholder="Укажите дату">
+              <button class="foto-date">
+              </button>
+              <div class="error-wrapper">
+                <p class="error">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </li>
+            <li class="modal-item">
+              <span class="modal-item-header">Дата Выезда:</span>
+              <label class="visually-hidden" for="auth-date">Дата</label>
+              <input value="1 сентября 2023" class="auth-form-field field" type="text" id="to-date" name="auth-date" placeholder="Укажите дату">
+              <button class="foto-date-too">
+              </button>
+              <div class="date-actual-wrapper">
+                <p class="date-actual">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+            </li>
+            <li class="modal-item-people">
+              <span class="modal-item-human">Взрослые:</span>
+              <div class="auth-form-field-people field-people">
+                <span class="modal-minus"></span>
+                <span class="modal-figure">2</span>
+                <span class="modal-plus"></span>
+              </div>
+              <span class="modal-item-child">Дети:</span>
+              <div class="auth-form-field-people field-people-2">
+                <span class="modal-minus-2"></span>
+                <span class="modal-figure">2</span>
+                <span class="modal-plus-2"></span>
+              </div>
+              <div class="icon-i">
+              </div>
+              <div class="popover">
+                <p class="popover-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+            </li>
+          </ul>
+          <button class="modal-button-search" type="submit">
+            <span class="modal-button-text">Найти</span>
+          </button>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

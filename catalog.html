@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона - каталог</title>
+    <title>Седона - каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   </head>
   <body>
     <header class="page-header">
@@ -119,15 +120,26 @@
               </fieldset>
               <fieldset class="catalog-filter-group catalog-filter-price">
                 <legend class="catalog-filter-legend">Стоимость, ₽:</legend>
-                <label class="control">
-                  <input class="catalog-filter-pricerange" type="text" name="price-min" value="0" placeholder="от">
-                </label>
-                <label class="control">
-                  <input class="catalog-filter-pricerange" type="text" name="price-max" value="9000" placeholder="до">
-                </label>
-                <label class="control">
-                  <input class="catalog-filter-pricerange" type="range" name="price-range">
-                </label>
+                <div class="price-input-container">
+                  <label class="price-label">
+                    <input class="price-input" type="number" name="price-min" value="0" min="0" max="12000">
+                    от
+                  </label>
+                  <label class="price-label">
+                    <input class="price-input" type="number" name="price-max" value="9000" min="0" max="12000">
+                    до
+                  </label>
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 200px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
               </fieldset>
               <div class="filter-buttons-container">
                 <button class="filter-submit button" type="submit">Применить</button>
@@ -142,6 +154,8 @@
             <p class="hotels-value">Найдено гостиниц: 38</p>
             <select class="hotels-select" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
             </select>
             <ul class="hotels-view-list">
               <li class="hotel-view-item">
@@ -177,13 +191,7 @@
               <p class="hotel-price">От 4000 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <ul class="hotel-rating-star">
-                <li class="rating-star starred"></li>
-                <li class="rating-star starred"></li>
-                <li class="rating-star starred"></li>
-                <li class="rating-star starred"></li>
-                <li class="rating-star"></li>
-              </ul>
+              <img class="rating-stars" src="images/four-stars.svg" width="90" height="17" alt="Четыре звезды.">
               <p class="hotel-rating">Рейтинг: 8,5</p>
             </li>
             <li class="hotel-card">
@@ -195,7 +203,7 @@
               <p class="hotel-price">От 5000 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-in-favorites button" type="button">в избранном</button>
-              <div class="hotel-rating-star"></div>
+              <img class="rating-stars" src="images/four-stars.svg" width="90" height="17" alt="Четыре звезды.">
               <p class="hotel-rating">Рейтинг: 9,2</p>
             </li>
             <li class="hotel-card">
@@ -207,7 +215,7 @@
               <p class="hotel-price">От 2500 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <div class="hotel-rating-star"></div>
+              <img class="rating-stars" src="images/three-stars.svg" width="66" height="17" alt="Три звезды.">
               <p class="hotel-rating">Рейтинг: 6,9</p>
             </li>
             <li class="hotel-card">
@@ -219,7 +227,7 @@
               <p class="hotel-price">От 1500 ₽</p>
               <a class="hotel-more-information button" href="#">подробнее</a>
               <button class="hotel-add-favorites button" type="button">в избранное</button>
-              <div class="hotel-rating-star"></div>
+              <img class="rating-stars" src="images/two-stars.svg" width="42" height="17" alt="Три звезды.">
               <p class="hotel-rating">Рейтинг: 5,0</p>
             </li>
           </ul>
@@ -250,7 +258,7 @@
       <div class="page-footer-container">
         <section class="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscribe-email" type="email" placeholder="Ваш e-mail">
             <button class="subscribe-submit button button-big" type="submit">Подписаться</button>
