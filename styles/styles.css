@@ -209,23 +209,18 @@ body {
 }
 
 .hero {
-  background-color: #000000;
   margin-bottom: 69px;
   padding: 51px 0 82px;
   background-image: url(../images/divider.png), url(../images/hero-banner.jpg);
   background-position: bottom center;
   background-size: 100% auto, cover;
   background-repeat: no-repeat, no-repeat;
+  background-color: #000000;
 }
 
 .hero-logo {
   display: block;
   margin: 0 auto;
-}
-
-.hero-divider {
-  position: absolute;
-  bottom: 0;
 }
 
 .advantages {
@@ -436,6 +431,7 @@ body {
   background-image: url(../images/subscribe-background.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: #000000;
   color: #FFFFFF;
 }
 
@@ -588,7 +584,7 @@ body {
   background-image: url(../images/header-background.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: #000000;
 }
 
 .inner-header {
@@ -1154,7 +1150,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
