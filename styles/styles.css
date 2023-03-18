@@ -465,18 +465,19 @@ body {
 }
 
 .subscribe-email {
-  display: block;
+  display: flex;
   flex-grow: 1;
   box-sizing: border-box;
   margin: 0;
-  padding: 0 20px;
-  background: #F2F2F2;
+  padding: 14px 20px;
+  width: 452px;
+  background-color: #F2F2F2;
   border: none;
   border-radius: 4px 0 0 4px;
   font-family: inherit;
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  line-height: 24px;
 }
 
 .subscribe-submit {
@@ -817,6 +818,7 @@ body {
 
 .range-bar {
   position: absolute;
+  width: 200px;
   height: 4px;
   background-color: #FFFFFF;
 }
@@ -1191,25 +1193,23 @@ body {
   background-color: #F2F2F2;
   border: none;
   cursor: pointer;
-
 }
 
 .modal-close-button:hover {
   background-color: #E6E6E6;
 }
 .modal-close-button:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   background-color: #e6e6e6;
 }
 .modal-close-button:active {
-  opacity: 30%;
   background-color: #E6E6E6;
+  opacity: 0.3;
 }
 
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  font-family: inherit;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -1220,28 +1220,129 @@ body {
 
 .modal-form {
   display: grid;
-  grid-template-columns: 247px 242px;
-  gap: 23px 88px;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 23px;
 }
 
-.modal-input-container {
+.modal-date-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   grid-column: 1/-1;
 }
 
+.date-input-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.date-input-label.children-input-label {
+  padding-right: 36px;
+}
+
 .date-input {
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin-bottom: 4px;
   width: 440px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+}
+
+.date-input-button {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 20px;
+  background-image: url(../images/date-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  border: none;
+  cursor: pointer;
 }
 
 .date-input-description {
   margin: 0;
-  margin-top: 4px;
+  padding-left: 157px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
 }
+
+.modal-visitors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visitors-adult {
+  justify-self: start;
+  grid-column: 1/2;
+}
+
+.visitors-children {
+  position: relative;
+  justify-self: end;
+  grid-column: 2/3;
+}
+
+.counter-container {
+  display: grid;
+  grid-template-columns: 1fr 31px 1fr;
+  margin-left: 46px;
+}
+
+.counter-button {
+  width: 40px;
+  height: 48px;
+  border: none;
+}
+
+.counter-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.counter {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  background-color: #F2F2F2;
+  text-align: center;
+  border: none;
+}
+
+.counter::-webkit-inner-spin-button,
+.counter::-webkit-outer-spin-button {
+  display: none;
+}
+
+.tooltip-button {
+  position: absolute;
+  right: 157px;
+  width: 26px;
+  height: 26px;
+  background-color: #83B3D3;
+  background-image: url(../images/tooltip.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 
 /*
 

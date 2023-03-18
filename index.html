@@ -126,7 +126,9 @@
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-email" type="email" name="user-mail" id="subscribe-user-mail" placeholder="Ваш e-mail" required>
+            <label>
+              <input class="subscribe-email" type="email" name="user-mail" id="subscribe-user-mail" placeholder="Ваш e-mail" required>
+            </label>
             <button class="subscribe-submit button button-big" type="submit">Подписаться</button>
           </form>
         </section>
@@ -168,15 +170,49 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="modal-input-container">
-              <label for="arrival-date-input">Дата Заезда:</label>
-                <input class="date-input" value="27 апреля 2020" type="text" name="date-input" id="arrival-date-input" placeholder="Укажите дату" required>
-              <p class="date-input-description">Мы не можем отправить вас в прошлое.</p>
+            <div class="modal-date-container">
+              <label class="date-input-label" for="arrival-date-input">Дата Заезда:</label>
+              <input class="date-input" value="27 апреля 2020" type="text" name="date-input" id="arrival-date-input" placeholder="Укажите дату" required>
+              <button class="date-input-button" type="button"></button>
+              <span class="date-input-description">Мы не можем отправить вас в прошлое.</span>
             </div>
-            <div class="modal-input-container">
-              <label for="departure-date-input">Дата Выезда:</label>
-                <input class="date-input" value="1 сентября 2023" type="text" name="date-input" id="" placeholder="Укажите дату" required>
-              <p class="date-input-description">На эти даты есть свободные номера. Пока есть.</p>
+            <div class="modal-date-container">
+              <label class="date-input-label" for="departure-date-input">Дата Выезда:</label>
+              <input class="date-input" value="1 сентября 2023" type="text" name="date-input" id="departure-date-input" placeholder="Укажите дату" required>
+              <button class="date-input-button" type="button"></button>
+              <span class="date-input-description">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="modal-visitors-container visitors-adult">
+              <label class="date-input-label" for="counter-adult">Взрослые:</label>
+              <div class="counter-container">
+
+                <button class="counter-button counter-minus" type="button">
+
+
+                </button>
+                <input class="counter" value="2" type="number" name="counter-value" id="counter-adult" placeholder="0">
+                <button class="counter-button" type="button">
+
+
+                </button>
+              </div>
+            </div>
+            <div class="modal-visitors-container visitors-children">
+
+              <label class="date-input-label children-input-label" for="counter-children">Дети:</label>
+              <button class="tooltip-button" type="button"></button>
+              <div class="counter-container">
+
+                <button class="counter-button counter-minus" type="button">
+
+
+                </button>
+                <input class="counter" value="2" type="number" name="counter-value" id="counter-children" placeholder="0">
+                <button class="counter-button" type="button">
+
+
+              </button>
+              </div>
             </div>
           </form>
         </section>
@@ -191,26 +227,6 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
           <ul class="modal-list">
-            <li class="modal-item">
-              <span class="modal-item-header">Дата Заезда:</span>
-              <label for="to-date"></label>
-              <input value="27 апреля 2020" class="auth-form-field field" type="text" id="from-date" name="auth-date" placeholder="Укажите дату">
-              <button class="foto-date">
-              </button>
-              <div class="error-wrapper">
-                <p class="error">Мы не можем отправить вас в прошлое.</p>
-              </div>
-            </li>
-            <li class="modal-item">
-              <span class="modal-item-header">Дата Выезда:</span>
-              <label for="from-date"></label>
-              <input value="1 сентября 2023" class="auth-form-field field" type="text" id="to-date" name="auth-date" placeholder="Укажите дату">
-              <button class="foto-date-too">
-              </button>
-              <div class="date-actual-wrapper">
-                <p class="date-actual">На эти даты есть свободные номера. Пока есть.</p>
-              </div>
-            </li>
             <li class="modal-item-people">
               <span class="modal-item-human">Взрослые:</span>
               <div class="auth-form-field-people field-people">
