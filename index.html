@@ -162,7 +162,24 @@
     </footer>
     <div class="modal-container modal-container-close">
       <div class="modal modal-booking">
-
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="modal-input-container">
+              <label for="arrival-date-input">Дата Заезда:</label>
+                <input class="date-input" value="27 апреля 2020" type="text" name="date-input" id="arrival-date-input" placeholder="Укажите дату" required>
+              <p class="date-input-description">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="modal-input-container">
+              <label for="departure-date-input">Дата Выезда:</label>
+                <input class="date-input" value="1 сентября 2023" type="text" name="date-input" id="" placeholder="Укажите дату" required>
+              <p class="date-input-description">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+          </form>
+        </section>
       </div>
     </div>
     <!-- <div class="modal-container modal-container-close">
