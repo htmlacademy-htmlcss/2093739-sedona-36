@@ -7,11 +7,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
+    <!-- Хэдер -->
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седоны.">
         </a>
+        <!-- Навигация -->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
@@ -23,6 +25,7 @@
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
+        <!-- Меню с иконками в разметке -->
         <ul class="main-menu">
           <li class="main-menu-item">
             <a class="main-menu-link" href="#">
@@ -50,13 +53,16 @@
     <main class="main-container main-index">
       <div class="page-container">
         <h1 class="visually-hidden">Седона — туристический городок в штате Аризона</h1>
+        <!-- Хиро-блок -->
         <section class="hero">
           <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
             <img class="hero-logo" src="images/logo-hero.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona.">
         </section>
+        <!-- Секция с преимуществами -->
         <section class="advantages">
           <h2 class="advantages-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
           <p class="advantages-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <!-- Список преимуществ, флекс -->
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-wide">
               <div class="advantages-item-container">
@@ -92,6 +98,7 @@
             </li>
           </ul>
         </section>
+        <!-- Блок с информацией, внутри также список-флекс -->
         <section class="about">
           <h2 class="about-title">Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</h2>
           <p class="about-subtitle">Опытный персонал и качественное обслуживание!</p>
@@ -113,6 +120,7 @@
             </li>
           </ul>
         </section>
+        <!-- Небольшой блок, по идее выводит модальное окно -->
         <section class="search">
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-subtitle">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
@@ -120,8 +128,10 @@
         </section>
       </div>
     </main>
+    <!-- Футер -->
     <footer class="page-footer">
       <div class="page-footer-container">
+        <!-- Блок футера с формой подписки на рассылку, дополнительный класс subscribe-index для фона на этой странице -->
         <section class="subscribe subscribe-index">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
@@ -132,6 +142,7 @@
             <button class="subscribe-submit button button-big" type="submit">Подписаться</button>
           </form>
         </section>
+        <!-- Блок футера с ссылками -->
         <section class="footer-links">
           <h2 class="visually-hidden">Ссылки</h2>
           <ul class="footer-social-list">
@@ -162,6 +173,7 @@
         </section>
       </div>
     </footer>
+    <!-- Модальное окно, изначально скрыто классом modal-container-close -->
     <div class="modal-container modal-container-close">
       <div class="modal modal-booking">
         <button class="modal-close-button" type="button">
@@ -169,6 +181,7 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <!-- Форма в модальном окне, грид -->
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="modal-date-container">
               <label class="date-input-label" for="arrival-date-input">Дата Заезда:</label>
